@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0099ff;
+            color: #FFF;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 80px;
+        }
+
+        #caxpais {
+            margin-top: 20px;
+            padding: 10px;
+            width: 45%;
+            background-color: #fff;
+            border: 1px solid #b1afaf;
+        }
+
+        #caxpais p {
+            margin: 5px 0;
+        }
+
+        #caxpais strong {
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Passaporte</h1>
+    </header>
+    <main>
+        <main>
+            <input type="text" name="cxpais" id="cxpais">
+            <input type="button" value="Verificar" onclick="verpais()">
+            <div id="caxpais"></div>
+        </main>
+        <script>
+            function verpais() {
+                var cxtpais = window.document.getElementById('cxpais')
+                var caxpais = window.document.getElementById('caxpais')
+                var paiss = cxtpais.value
+                var stranger = 'ESTRANGEIRO'
+                if (paiss === 'Brasil') {
+                    caxpais.innerHTML = `<p> Você mora atualmente aqui em <strong>${paiss}</strong> ! Portanto você é Brasileiro.</p>`
+                } else {
+                    caxpais.innerHTML = `<p> Você mora atualmente no <strong>${paiss}</strong>! Portanto você é <strong> ${stranger}.</strong></p>`
+                }
+            }
+        </script>
+</body>
+</html>
